@@ -5,7 +5,9 @@
   <title>Project | Header - Navigation</title>
 
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
   <meta name="description" content="My personal header with navigation project." />
   <meta name="keywords" content="web design, web development, navigation, header" />
 
@@ -16,56 +18,86 @@
 
 <body>
   <header id="site-header" class="header-container">
-    <nav class="nav-cont">
+    <nav id="NavCont" class="nav-cont">
       <div class="logo-cont">
         <a class="logo-link" href="javascript:void(0);">
-          <img class="logo-img" src="../Assets/Logos/compass-logo.png" alt="Robert Berryhill | Compass - Logo">
+          <img class="logo-img" src="./assets/compass-logo.png" alt="Robert Berryhill | Compass - Logo">
         </a>
       </div>
-      <ul class="main-nav nav-menu upcase">
-        <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0);">Browse</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0);">Products</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0);">Solutions</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0);">About</a>
-        </li>
-      </ul>
-      <ul class="right-nav nav-menu">
-        <li class="nav-item">
-          <a class="nav-link flex-center" href="javascript:void(0);">
-            <span class="search-icon">
-              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search"
-                class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512">
-                <path fill="currentColor"
-                  d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
-                </path>
-              </svg>
-            </span>
-            <span class="nav-link-copy">Search</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link flex-center" href="javascript:void(0);">
-            <span class="account-icon">
-              <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="user-circle"
-                class="svg-inline--fa fa-user-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 496 512">
-                <path fill="currentColor"
-                  d="M248 104c-53 0-96 43-96 96s43 96 96 96 96-43 96-96-43-96-96-96zm0 144c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm0-240C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-49.7 0-95.1-18.3-130.1-48.4 14.9-23 40.4-38.6 69.6-39.5 20.8 6.4 40.6 9.6 60.5 9.6s39.7-3.1 60.5-9.6c29.2 1 54.7 16.5 69.6 39.5-35 30.1-80.4 48.4-130.1 48.4zm162.7-84.1c-24.4-31.4-62.1-51.9-105.1-51.9-10.2 0-26 9.6-57.6 9.6-31.5 0-47.4-9.6-57.6-9.6-42.9 0-80.6 20.5-105.1 51.9C61.9 339.2 48 299.2 48 256c0-110.3 89.7-200 200-200s200 89.7 200 200c0 43.2-13.9 83.2-37.3 115.9z">
-                </path>
-              </svg>
-            </span>
-            <span class="nav-link-copy">Account</span>
-          </a>
-        </li>
-      </ul>
+      <div class="nav-wrap">
+        <ul class="main-nav nav-menu upcase nav-has-drpdn">
+          <li class="nav-item nav-itm-has-drpdn" aria-expanded="false">
+            <a class="nav-link drp-dwn-toggle chevron-down" href="javascript:void(0);">
+              <span>Browse</span>
+            </a>
+            <div class="nav-drp-dwn">
+              <div class="nav-drp-dwn-ttl-cont drp-dwn-cls">
+                <button class="chevron-left"></button>
+                <h4 class="nav-drp-dwn-title">Categories</h4>
+              </div>
+              <ul class="nav-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);">Software</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);">Hardware</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);">Components</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);">Network</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);">Services</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0);">Category</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0);">Solution</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0);">Company</a>
+          </li>
+        </ul>
+        <ul class="right-nav nav-menu nav-has-drpdn">
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0);">
+              <span class="search-icon"></span>
+              <span class="nav-link-copy">Search</span>
+            </a>
+          </li>
+          <li class="nav-item nav-itm-has-drpdn">
+            <a class="nav-link" href="javascript:void(0);">
+              <span class="user-account"></span>
+              <span class="nav-link-copy">My Account</span>
+            </a>
+            <div class="nav-drp-dwn">
+              <ul class="nav-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);">My Account</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);">Settings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);">Sign Out</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button id="MobileToggle" class="hamburger hamburger--vortex" type="button" aria-label="Menu"
+        aria-controls="navigation" aria-expanded="false">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
     </nav>
   </header>
   <main>
