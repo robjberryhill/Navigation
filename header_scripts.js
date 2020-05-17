@@ -23,25 +23,16 @@ const mblMnuTgl = (evt) => {
 }
 
 const mblDrpDwn = (evt) => {
-  let elm = evt.currentTarget;
-  let elmAtr = elm.parentElement.getAttribute('aria-expanded');
-  console.log(elm)
+  let elm = evt.currentTarget, elmAtr, elmPrt;
+  //console.log(elm)
 
-  if (elmAtr === 'false') {
-    elm.parentElement.setAttribute('aria-expanded', 'true');
-  } else if (elmAtr === "true") {
-    elm.parentElement.setAttribute('aria-expanded', 'false');
+  if (elm.classList.contains('drp-dwn-toggle')) {
+    elmPrt = elm.parentElement;
+  } else if (elm.classList.contains('drp-dwn-cls')) {
+    elmPrt = elm.parentElement.parentElement;
   }
-}
 
-const mblDrpCls = (evt) => {
-  let elm = evt.currentTarget;
-  let elmPrt = elm.parentElement.parentElement;
-  let elmAtr = elmPrt.getAttribute('aria-expanded');
-
-  console.log('click')
-
-  console.log(elmAtr)
+  elmAtr = elmPrt.getAttribute('aria-expanded');
 
   if (elmAtr === 'false') {
     elmPrt.setAttribute('aria-expanded', 'true');
@@ -59,13 +50,9 @@ const drpDwnEvts = () => {
     createEvent('click', mblDrpDwn, elm);
   }
 
-  console.log(mblDrpDwnCls)
-
   for (let i = 0; i < mblDrpDwnCls.length; i++) {
     let elm = mblDrpDwnCls[i];
-    let prtElm = elm.parentElement.parentElement;
-    console.log(elm)
-    createEvent('click', mblDrpCls, elm);
+    createEvent('click', mblDrpDwn, elm);
   }
 }
 
